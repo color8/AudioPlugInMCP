@@ -1,0 +1,13 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/@anthropic-ai/mcp-registry@latest/dist/schema.json",
+  "name": "io.github.promptmonster-media-ltd/audiopluginmcp",
+  "title": "Audio Plugin MCP Server",
+  "description": "MCP server for audio plugin development — load VST3/AU/CLAP plugins, process audio, render MIDI, analyze spectral content, compare outputs, manage presets, and compile JUCE projects.",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "audiopluginmcp"
+    }
+  ]
+}

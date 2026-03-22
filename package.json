@@ -1,0 +1,38 @@
+{
+  "name": "audiopluginmcp",
+  "version": "1.0.0",
+  "description": "MCP server for audio plugin development — load VST3/AU/CLAP plugins, process audio, render MIDI, analyze spectral content, and compile JUCE projects.",
+  "type": "module",
+  "bin": {
+    "audiopluginmcp": "bin/launch.js"
+  },
+  "files": [
+    "bin",
+    "server.py",
+    "engines",
+    "utils",
+    "config.yaml",
+    "requirements.txt"
+  ],
+  "mcpName": "io.github.promptmonster-media-ltd/audiopluginmcp",
+  "keywords": [
+    "mcp",
+    "audio",
+    "vst",
+    "vst3",
+    "plugin",
+    "daw",
+    "juce",
+    "midi",
+    "dsp",
+    "pedalboard",
+    "music-production"
+  ],
+  "author": "PromptMonster Media Ltd",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PromptMonster-Media-Ltd/AudioPlugInMCP.git"
+  },
+  "homepage": "https://github.com/PromptMonster-Media-Ltd/AudioPlugInMCP"
+}
