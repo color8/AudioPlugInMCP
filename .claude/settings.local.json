@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -l /d/Development/AudioPlugInMCP/mcp-audio-plugin-server-v2.zip)",
+      "Bash(unzip -p /d/Development/AudioPlugInMCP/mcp-audio-plugin-server-v2.zip mcp-audio-plugin-server/requirements.txt)",
+      "Bash(unzip -p /d/Development/AudioPlugInMCP/mcp-audio-plugin-server-v2.zip mcp-audio-plugin-server/config.yaml)"
+    ]
+  }
+}
