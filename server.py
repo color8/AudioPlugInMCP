@@ -2086,7 +2086,9 @@ def stress_test_plugin(
 if __name__ == "__main__":
     transport = os.environ.get("MCP_TRANSPORT", "stdio")
     if transport == "sse":
-        port = int(os.environ.get("PORT", "8000"))
-        mcp.run(transport="sse", host="0.0.0.0", port=port)
+        # FastMCP reads host/port from these env vars
+        os.environ.setdefault("MCP_HOST", "0.0.0.0")
+        os.environ.setdefault("MCP_PORT", os.environ.get("PORT", "8000"))
+        mcp.run(transport="sse")
     else:
         mcp.run(transport="stdio")
