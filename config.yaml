@@ -1,0 +1,47 @@
+# =============================================================================
+# Audio Plugin MCP Server — Configuration
+# =============================================================================
+# Edit these paths to match your system. The server reads this file on startup.
+# All paths support both forward slashes and backslashes on Windows.
+
+# Where to search for VST3/AU/CLAP plugins
+plugin_search_paths:
+  # Windows standard VST3 location (always present)
+  - "C:/Program Files/Common Files/VST3"
+  # Windows 32-bit VST3 (rare, but some older plugins)
+  - "C:/Program Files (x86)/Common Files/VST3"
+  # CLAP standard location
+  - "C:/Program Files/Common Files/CLAP"
+  # macOS paths (ignored on Windows, included for cross-platform)
+  - "/Library/Audio/Plug-ins/VST3"
+  - "~/Library/Audio/Plug-ins/VST3"
+  - "/Library/Audio/Plug-ins/Components"
+  - "~/Library/Audio/Plug-ins/Components"
+  # Linux paths
+  - "~/.vst3"
+  - "/usr/lib/vst3"
+  - "~/.clap"
+
+# Default audio settings
+audio:
+  sample_rate: 44100
+  bit_depth: 32          # 16, 24, or 32 (float)
+  channels: 2            # 1 (mono) or 2 (stereo)
+  buffer_size: 512       # Processing buffer size in samples
+  default_duration: 5.0  # Default render duration in seconds
+
+# Where rendered audio files are cached
+cache:
+  directory: "./audio_cache"
+  max_size_mb: 500       # Auto-clean oldest files when exceeded
+
+# JUCE compilation settings (for compile_juce_project tool)
+build:
+  cmake_path: null       # null = auto-detect from PATH
+  generator: null        # null = auto-detect (VS 2022 on Windows, Xcode on macOS)
+  build_type: "Release"
+  parallel_jobs: null    # null = use all available cores
+
+# Logging
+logging:
+  level: "INFO"          # DEBUG, INFO, WARNING, ERROR

@@ -1,0 +1,26 @@
+# Audio Plugin MCP Server — Dependencies
+# Install with: pip install -r requirements.txt
+
+# MCP Server Framework (pin to v1.x — v2 has breaking changes)
+mcp[cli]>=1.25,<2
+
+# Plugin Hosting
+pedalboard>=0.9.22
+
+# Advanced MIDI Rendering (optional — server works without it)
+# dawdreamer>=0.8.3
+
+# Audio Analysis
+librosa>=0.11.0
+pyloudnorm>=0.2.0
+
+# Audio I/O
+soundfile>=0.12.0
+
+# MIDI
+mido>=1.3.0
+
+# Core
+numpy>=1.24.0
+scipy>=1.11.0
+pyyaml>=6.0
